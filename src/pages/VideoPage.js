@@ -121,9 +121,8 @@ const VideoPage = () => {
 		}
 		fetchVideoSnippet();
 		fetchVideoStats();
-		// eslint-disable-next-line
-	}, []);
-
+	}, [videoName]);
+	// eslint-disable-next-line
 	// render/filter result based on selected tab
 	const filterTab = () => {
 		console.log(overRef.current);
