@@ -133,7 +133,7 @@ const VideoPage = () => {
 				<>
 					<div className='videoPage__tags'>
 						{details.tags
-							? details.tags.forEach(tag => {
+							? details.tags.map(tag => {
 									if (counter <= 4) {
 										counter++;
 										return <h2 className='tag'> {tag}</h2>;
