@@ -51,6 +51,7 @@ const VideoPage = () => {
 	// const currentMonth = new Date().getMonth();
 
 	const getYear = details.published.substr(0, 4);
+	const diff = currentYear - getYear;
 	let counter = 0;
 
 	const openTab = tab => {
@@ -120,6 +121,7 @@ const VideoPage = () => {
 		}
 		fetchVideoSnippet();
 		fetchVideoStats();
+		// eslint-disable-next-line
 	}, []);
 
 	// render/filter result based on selected tab
@@ -131,7 +133,7 @@ const VideoPage = () => {
 				<>
 					<div className='videoPage__tags'>
 						{details.tags
-							? details.tags.map(tag => {
+							? details.tags.forEach(tag => {
 									if (counter <= 4) {
 										counter++;
 										return <h2 className='tag'> {tag}</h2>;
@@ -175,7 +177,7 @@ const VideoPage = () => {
 											This year
 										</p>
 									) : (
-										'nothing'
+										`${diff} years ago`
 									)}
 								</div>
 							</div>

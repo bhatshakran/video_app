@@ -92,6 +92,7 @@
 						font-family: $main__font;
 						line-height: 1.9rem;
 						font-size: 1.2rem;
+						width: 100%;
 					}
 				}
 				.tab__utils {
@@ -210,11 +211,13 @@
 		.tab__info__container {
 			padding: 0.5rem !important;
 			.tab__info {
+				overflow: hidden;
 				h2 {
 					font-size: 1.5rem !important;
 				}
 				p {
-					font-size: 0.7rem !important;
+					width: 100% !important;
+					font-size: 0.8rem !important;
 					line-height: 20px !important;
 				}
 			}
