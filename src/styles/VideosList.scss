@@ -1,0 +1,27 @@
+.videos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2rem 1rem;
+	align-items: center;
+
+	.videos__intro {
+		h1 {
+			font-size: 4rem;
+			font-family: $main__font;
+		}
+		margin: 0 0 2rem 0;
+	}
+	.videos__list {
+		width: 100%;
+		background: #111229;
+		border-radius: 8px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+		grid-template-rows: repeat(auto-fit, 400px);
+		grid-column-gap: 1rem;
+		justify-content: center;
+		padding: 1rem 0.5rem;
+		grid-row-gap: 0.8rem;
+	}
+}

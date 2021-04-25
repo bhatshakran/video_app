@@ -1,0 +1,94 @@
+.recVideo__card {
+	color: $white;
+	width: 100%;
+	border-radius: 0 !important;
+	margin: 0.5rem 0;
+	box-shadow: none !important;
+	position: relative;
+
+	.recVideo_action {
+		display: flex;
+		align-items: center;
+		padding: 0;
+
+		.recVideo__media {
+			width: 50%;
+			height: 150px;
+			border-radius: 8px;
+			margin-top: 0.5rem;
+		}
+		.recVideo__content {
+			width: 50%;
+			.recVideo__stars {
+				color: gold;
+				margin-top: 0.5rem;
+				font-size: 1.2rem;
+			}
+			h3 {
+				font-size: 1rem;
+				margin-top: 0rem;
+				color: rgba(0, 0, 0, 0.671);
+			}
+			.recVideo__channel {
+				margin-top: 0.7rem;
+				font-size: 0.8rem;
+
+				color: grey;
+			}
+			.recVideo__date {
+				margin: 0.5rem 0;
+				color: $sec__color;
+				font-size: 0.7rem;
+				.recVideo__hour {
+					font-size: 0.7rem;
+				}
+			}
+			.recVideo__more {
+				position: absolute;
+				top: 15px;
+				right: 0;
+				color: rgba(0, 0, 0, 0.671);
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.recVideo__card {
+		height: 300px !important;
+
+		.recVideo_action {
+			flex-direction: column;
+
+			.recVideo__media {
+				width: 100% !important;
+				height: 200px !important;
+			}
+			.recVideo__content {
+				height: 100px !important;
+				width: 100% !important;
+				.recVideo__stars {
+					color: gold;
+					margin-top: 0.3rem;
+					font-size: 0.7rem;
+				}
+				h3 {
+					font-size: 0.6rem;
+					margin-top: 0.5rem;
+					color: $primary__color;
+				}
+				.recVideo__channel {
+					margin-top: 0.2rem;
+					font-size: 0.6rem;
+
+					color: grey;
+				}
+				.recVideo__date {
+					margin: 0.2rem 0;
+					color: $sec__color;
+					font-size: 0.4rem;
+				}
+			}
+		}
+	}
+}

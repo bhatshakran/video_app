@@ -1,0 +1,42 @@
+.videoCard {
+	width: 100%;
+	border-radius: 12px;
+	// transition: all 0.3s ease-in-out;
+	&:hover {
+		transition: all 0.4s ease-in-out;
+		transform: scale(1.05);
+	}
+
+	button {
+		border-radius: 0 0 12px 12px;
+		&:hover {
+			opacity: 0.8;
+		}
+		.video__media {
+			height: 200px;
+			padding: 0;
+			border-radius: 0 0 12px 12px;
+			background-size: 350px 300px;
+			background-position: center;
+		}
+		.MuiCardContent-root {
+			display: flex;
+			flex-direction: column;
+			height: 200px;
+			h1 {
+				font-size: 1.25rem;
+				color: $primary__color;
+			}
+			h3 {
+				margin: 1rem 0;
+				flex: 1;
+				color: $sec__color;
+				text-decoration: underline;
+			}
+			p {
+				font-style: italic;
+				color: $sec__color;
+			}
+		}
+	}
+}

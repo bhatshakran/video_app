@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+// variables
+$primary__color: #5d4bff;
+$white: #fff;
+$black: black;
+$main__font: 'Lato';
+$sec__color: #2f0f63;
+// imports
+@import './styles/SearchInput.scss';
+@import './styles/VideosList.scss';
+@import './styles/VideoCard.scss';
+@import './styles/VideoPage.scss';
+@import './styles/RecVideoCard.scss';
+
+// global styling
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	background-color: $white;
+	color: $black;
+}
+.app {
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+// #6f28e0

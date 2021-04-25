@@ -1,0 +1,246 @@
+.videoPage {
+	width: 100%;
+	display: flex;
+	padding: 0;
+	.videoPage__container {
+		width: 70%;
+		height: 100%;
+
+		iframe {
+			width: calc(100% - 2rem);
+			height: 600px;
+			border-radius: 10px;
+			border: none;
+			margin: 1rem;
+			margin-right: 1rem !important;
+		}
+		.videoPage__details {
+			width: 100%;
+			margin-top: 1rem;
+			padding: 2rem 0 2rem 1rem;
+			.videoPage__tabs {
+				width: 100%;
+				display: flex;
+				justify-content: flex-start;
+				padding: 0 3rem;
+
+				.MuiButtonBase-root {
+					background-color: #6f28e01c;
+					text-transform: capitalize;
+					font-size: 1rem;
+					color: $primary__color;
+					height: 50px;
+					box-shadow: none;
+					margin-right: 1rem;
+					border-radius: 8px;
+
+					.MuiButton-startIcon {
+						align-self: center;
+						margin: 0 0 0 0.1rem;
+					}
+
+					.btn__name {
+						display: none;
+					}
+				}
+				.active {
+					box-shadow: 0px 0px 30px $primary__color;
+					background: $primary__color;
+					color: $white;
+					.btn__name {
+						display: block;
+						padding: 0 0 0 0.3rem;
+					}
+				}
+			}
+			.videoPage__tags {
+				margin: 4rem 2rem 0 2rem;
+				display: flex;
+				align-items: center;
+				width: 100%;
+
+				h2 {
+					margin: 0 1rem;
+					color: rgb(144, 194, 46);
+					font-family: $main__font;
+					font-size: 1rem;
+					letter-spacing: 0.06rem;
+					text-transform: lowercase;
+					text-transform: capitalize;
+				}
+				h2:first-child {
+					margin-left: 0;
+				}
+				.tags__addIcon {
+					color: rgb(144, 194, 46);
+					margin-left: 2rem;
+				}
+			}
+			.tab__info__container {
+				display: flex;
+				align-items: flex-start;
+				padding: 2rem 0 2rem 2rem;
+				.tab__info {
+					width: 80%;
+
+					h2 {
+						font-family: $main__font;
+						font-size: 3rem;
+						margin: 0 0 2rem 0;
+					}
+					p {
+						font-family: $main__font;
+						line-height: 1.9rem;
+						font-size: 1.2rem;
+					}
+				}
+				.tab__utils {
+					margin-top: 1rem;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					justify-content: flex-end;
+					height: 100%;
+					width: 20%;
+					text-align: right;
+					margin-left: 1rem;
+					margin-right: 1rem;
+					div {
+						width: 50%;
+					}
+					.bookmark__icon {
+						width: 30px;
+					}
+
+					.video__stats {
+						width: 100%;
+						font-family: $main__font;
+						h3 {
+							font-style: italic;
+							color: $primary__color;
+							margin-top: 0.5rem;
+							display: flex;
+							align-items: center;
+							// justify-content: flex-end;
+						}
+
+						.video__star__group {
+							margin-top: 2rem;
+							width: 100%;
+
+							.video__stars {
+								color: gold;
+								font-size: 2rem;
+							}
+						}
+
+						p {
+							color: grey;
+							font-size: 0.7rem;
+							flex: 0.5;
+							display: flex;
+							justify-content: flex-end;
+							align-items: center;
+						}
+
+						.video__views {
+							width: 100%;
+							margin-top: 1rem;
+							display: flex;
+							text-align: right;
+							align-items: flex-end;
+							.vis__icon,
+							.hour__icon {
+								font-size: 0.7rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.videoPage__recommended {
+		width: 30%;
+		background: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.recommended__intro {
+			margin: 1rem 0 0 0;
+			text-align: center;
+			background-color: #6f28e01c;
+			color: grey;
+			padding: 0.7rem;
+			border-radius: 12px;
+			width: 150px;
+			font-family: $main__font;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.videoPage {
+		padding: 0 0.3rem !important;
+		flex-direction: column;
+		.videoPage__container {
+			width: 100%;
+			iframe {
+				height: 400px;
+			}
+		}
+		.videoPage__details {
+			width: 100%;
+			padding: 0rem !important;
+			.videoPage__tabs {
+				width: 100%;
+				padding: 0 0.2rem !important;
+				.MuiButtonBase-root {
+					margin-right: 0.1rem !important;
+				}
+			}
+		}
+		.videoPage__tags {
+			margin: 2rem 0 !important;
+			flex-wrap: wrap;
+			width: 100% !important;
+			h2 {
+				margin: 0.2rem !important;
+			}
+		}
+		.tab__info__container {
+			padding: 0.5rem !important;
+			.tab__info {
+				h2 {
+					font-size: 1.5rem !important;
+				}
+				p {
+					font-size: 0.7rem !important;
+					line-height: 20px !important;
+				}
+			}
+		}
+		.tab__utils {
+			margin-left: 0.7rem;
+			.bookmark__icon {
+				width: 15px !important;
+			}
+			.video__stats {
+				.video__star__group {
+					.video__stars {
+						font-size: 0.6rem !important;
+					}
+				}
+				.video__views {
+					flex-direction: column;
+				}
+			}
+		}
+		.videoPage__recommended {
+			width: 100% !important;
+
+			.recommended__intro {
+				margin: 1rem auto;
+			}
+		}
+	}
+}
